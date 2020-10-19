@@ -1,9 +1,8 @@
 import { Request, Response} from 'express';
-import e = require('express');
-import Users from './../book';
+import Users from '../mongo/Schemas/Users';
 
 export let allUsers = (req: Request, res: Response) =>{
-    let users = Users.find((err:any, users:any)=>{
+    Users.find((err:any, users:any)=>{
         if(err){
             res.send(err)
         }else{
@@ -47,7 +46,7 @@ export let deleteUser = (req:Request, res:Response)=>{
 }
 
 export let updateUser = (req:Request, res:Response)=>{
-    Users.findOne(req.params.id, req.body, (err:any, user:any)=>{
+    Users.findOneAndUpdate({phoneNumber:req.params.id}, req.body, (err:any, user:any)=>{
             if(err){
                 res.send(err)
             }else{

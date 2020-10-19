@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateUser = exports.deleteUser = exports.addUser = exports.getUser = exports.allUsers = void 0;
-const book_1 = require("./../book");
+const Users_1 = require("../mongo/Schemas/Users");
 exports.allUsers = (req, res) => {
-    let users = book_1.default.find((err, users) => {
+    Users_1.default.find((err, users) => {
         if (err) {
             res.send(err);
         }
@@ -14,7 +14,7 @@ exports.allUsers = (req, res) => {
 };
 exports.getUser = (req, res) => {
     console.log(`req.params.id ${req.params.id}`);
-    book_1.default.findOne({ phoneNumber: req.params.id }, (err, user) => {
+    Users_1.default.findOne({ phoneNumber: req.params.id }, (err, user) => {
         if (err) {
             res.send(err);
         }
@@ -24,7 +24,7 @@ exports.getUser = (req, res) => {
     });
 };
 exports.addUser = (req, res) => {
-    let user = new book_1.default(req.body);
+    let user = new Users_1.default(req.body);
     user.save((err) => {
         if (err) {
             res.send(err);
@@ -35,7 +35,7 @@ exports.addUser = (req, res) => {
     });
 };
 exports.deleteUser = (req, res) => {
-    book_1.default.deleteOne({ phoneNumber: req.params.id }, (err) => {
+    Users_1.default.deleteOne({ phoneNumber: req.params.id }, (err) => {
         if (err) {
             res.send(err);
         }
@@ -45,7 +45,7 @@ exports.deleteUser = (req, res) => {
     });
 };
 exports.updateUser = (req, res) => {
-    book_1.default.findOne(req.params.id, req.body, (err, user) => {
+    Users_1.default.findOneAndUpdate({ phoneNumber: req.params.id }, req.body, (err, user) => {
         if (err) {
             res.send(err);
         }
