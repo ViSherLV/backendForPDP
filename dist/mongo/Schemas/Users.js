@@ -3,7 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TestSchema = void 0;
 const mongoose = require("mongoose");
 exports.TestSchema = new mongoose.Schema({
-    phoneNumber: { type: Number, required: true }
+    name: { type: String, required: false },
+    phone: { type: Number, required: true },
+    chatId: { type: Number, required: true }
 });
 const Users = mongoose.model('Book', exports.TestSchema);
 exports.default = Users;

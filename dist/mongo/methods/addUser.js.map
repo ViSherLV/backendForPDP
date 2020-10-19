@@ -1,0 +1,1 @@
+{"version":3,"file":"addUser.js","sourceRoot":"","sources":["../../../src/mongo/methods/addUser.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,4CAAqC;AAOrC,SAAe,WAAW,CAAC,GAAY;;QACnC,IAAI,OAAO,GAAG,IAAI,eAAK,CAAC,GAAG,CAAC,CAAA;QAC5B,MAAM,MAAM,GAAO,MAAM,OAAO,CAAC,IAAI,EAAE,CAAA;QACvC,OAAO,MAAM,CAAC;IAClB,CAAC;CAAA;AAEO,kCAAW"}
