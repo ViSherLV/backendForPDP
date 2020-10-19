@@ -1,0 +1,16 @@
+node_modules/
+.idea
+.DS_Store
+.env
+error.log
+combined.log
+dump/
+.nyc_output
+coverage/
+.scannerwork/
+client/.vscode/launch.json
+package-*
+.gitattributes
+environment/.env.*
+.env*
+mongoose-schema/
