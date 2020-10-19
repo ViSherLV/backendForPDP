@@ -11,11 +11,4 @@ import * as mongoose from 'mongoose';
     })
     
 }
-
-//const uri: string = "mongodb+srv://visher:chatbot@cluster0.mxirp.mongodb.net/testdb?retryWrites=true&w=majority";
-
-// export const TestSchema = new mongoose.Schema({
-//     phoneNumber:{type:Number, required: true}
-// })
-// const Users = mongoose.model('Book',TestSchema);
- export {connectToMongo};
+export {connectToMongo};
