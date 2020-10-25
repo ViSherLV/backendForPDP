@@ -16,7 +16,7 @@ const bot = new Telegraf(token);
 const addUser_1 = require("../mongo/methods/addUser");
 function startBot() {
     bot.start((ctx) => {
-        return ctx.reply('Hello! Please share your number', Extra.markup((markup) => {
+        return ctx.reply('Hello! Please share your phone number', Extra.markup((markup) => {
             return markup
                 .oneTime()
                 .resize()

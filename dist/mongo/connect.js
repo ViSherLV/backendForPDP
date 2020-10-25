@@ -18,7 +18,7 @@ function connectToMongo(uri) {
                 console.log(err.message);
             }
             else {
-                console.log("Succesfully Connected to MingoDB");
+                console.log("Succesfully Connected to MongoDB");
             }
         });
     });

@@ -4,7 +4,7 @@ exports.TestSchema = void 0;
 const mongoose = require("mongoose");
 exports.TestSchema = new mongoose.Schema({
     name: { type: String, required: false },
-    phone: { type: Number, required: true },
+    phoneNumber: { type: Number, required: true },
     chatId: { type: Number, required: true }
 });
 const Users = mongoose.model('Book', exports.TestSchema);
