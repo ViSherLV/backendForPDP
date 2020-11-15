@@ -29,9 +29,9 @@ function startBot() {
     bot.on('contact', (ctx) => __awaiter(this, void 0, void 0, function* () {
         console.log(ctx.update.message.contact);
         const name = ctx.update.message.contact.first_name;
-        const phone = +ctx.update.message.contact.phone_number;
+        const phoneNumber = +ctx.update.message.contact.phone_number;
         const chatId = +ctx.update.message.contact.user_id;
-        yield addUser_1.addUserToDB({ name, phone, chatId });
+        yield addUser_1.addUserToDB({ name, phoneNumber, chatId });
         return ctx.reply('👍');
     }));
     bot.launch();

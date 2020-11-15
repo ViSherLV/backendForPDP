@@ -2,7 +2,7 @@ import Users from '../Schemas/Users';
 
 interface UserData {
     name: string,
-    phone: number,
+    phoneNumber: number,
     chatId: number
 }
 async function addUserToDB(obj: UserData) {

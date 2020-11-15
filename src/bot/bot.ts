@@ -17,9 +17,9 @@ function startBot() {
     bot.on('contact', async (ctx: any) => {
         console.log(ctx.update.message.contact);
         const name: string = ctx.update.message.contact.first_name;
-        const phone: number = +ctx.update.message.contact.phone_number;
+        const phoneNumber: number = +ctx.update.message.contact.phone_number;
         const chatId: number = +ctx.update.message.contact.user_id;
-        await addUserToDB({ name, phone, chatId })
+        await addUserToDB({ name, phoneNumber, chatId })
         return ctx.reply('👍')
     }
     );

@@ -14,6 +14,8 @@ app.get('/user/:id', usersContoller.getUser);
 app.put('/user/:id', usersContoller.updateUser);
 app.delete('/user/:id', usersContoller.deleteUser);
 app.post('/user/', usersContoller.addUser);
+app.post('/sendMessage/', usersContoller.senMessagesToUsers);
+
 
 const uri: string = "mongodb+srv://visher:chatbot@cluster0.mxirp.mongodb.net/testdb?retryWrites=true&w=majority";
 connectToMongo(uri)
