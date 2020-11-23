@@ -1,14 +1,14 @@
-import Users from '../Schemas/Users';
+import Users from "../Schemas/Users";
 
 interface UserData {
-    name: string,
-    phoneNumber: number,
-    chatId: number
+  name: string;
+  phoneNumber: number;
+  chatId: number;
 }
 async function addUserToDB(obj: UserData) {
-    let newUser = new Users(obj)
-    const result: any = await newUser.save()
-    return result;
+  let newUser = new Users(obj);
+  const result: any = await newUser.save();
+  return result;
 }
 
-export { addUserToDB }
+export { addUserToDB };

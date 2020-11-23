@@ -41,7 +41,7 @@ exports.deleteUser = (req, res) => {
             res.send(err);
         }
         else {
-            res.send('User deleted');
+            res.send("User deleted");
         }
     });
 };
@@ -51,7 +51,7 @@ exports.updateUser = (req, res) => {
             res.send(err);
         }
         else {
-            res.send('User updated');
+            res.send("User updated");
         }
     });
 };
@@ -64,10 +64,10 @@ exports.senMessagesToUsers = (req, res) => {
             const route = `https://api.telegram.org/bot1268971736:AAHS6Gyr_KQDZQlxS8LqPH2cA9cu4a_qbks/sendMessage?chat_id=${user}&text=${encodeMessage}`;
             axios_1.default.get(route);
         }
-        res.send('Accept');
+        res.send("Accept");
     }
     catch (_a) {
-        res.send('Canst sene messages');
+        res.send("Canst sene messages");
     }
 };
 //# sourceMappingURL=usersController.js.map
